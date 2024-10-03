@@ -12,22 +12,54 @@
     <select id="speedControl">
         <option value="50">X-treme</option>
         <option value="100">Fast</option>
-      <option value="300" selected>Normal</option>
-      <option value="500">Slow</option>
+        <option value="300" selected>Normal</option>
+        <option value="500">Slow</option>
     </select>
   </div>
   
+  <!-- HUD Container -->
+  <div id="hud">
+    <div id="scoreBox" class="hud-item">
+      <span>Score:</span>
+      <span id="score">0</span>
+    </div>
+    <div id="highScoreBox" class="hud-item">
+      <span>High Score:</span>
+      <span id="highScore">0</span>
+    </div>
+    <div id="levelBox" class="hud-item">
+      <span>Level:</span>
+      <span id="level">1</span>
+    </div>
+    <div id="livesBox" class="hud-item">
+      <span>Lives:</span>
+      <div id="lives">
+        <img src="./styling/heart.png" alt="Life" class="life">
+        <img src="./styling/heart.png" alt="Life" class="life">
+        <img src="./styling/heart.png" alt="Life" class="life">
+      </div>
+    </div>
+  </div>
+
   <canvas id="gameCanvas" width="600" height="400" class="grid-lines"></canvas>
 
-   <!-- Game Over Modal -->
-  <div id="gameOverModal" class="modal">
+  <!-- Game Over Modal -->
+  <div id="gameOverModal" class="modal" style="display: none;">
     <div class="modal-content">
       <span id="closeModal" class="close"></span>
       <p>Game Over!</p>
       <button id="modalOkButton">OK</button>
     </div>
   </div>
-  
+
+  <!-- Countdown Modal -->
+  <div id="countdownModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span id="closeCountdownModal" class="close"></span>
+      <p>Genstarter om <span id="countdown">5</span> sekunder...</p>
+    </div>
+  </div>
+    
   <!-- Inkluder Queue-klassen først -->
   <script src="queue.js"></script>
   
@@ -36,8 +68,7 @@
   <script src="view.js"></script>
   <script src="controller.js"></script>
   
-  <!-- Inkluder styling -->
-<script type="module" src="/styling/enhancements.js"></script>
-  <script type="module" src="/styling/fruitDrawing.js"></script>
+  <!-- Inkluder enhancements.js som modul -->
+  <script type="module" src="./styling/enhancements.js"></script>
 </body>
 </html>

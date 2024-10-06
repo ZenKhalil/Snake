@@ -68,7 +68,7 @@ class SnakeController {
 window.onload = () => {
   console.log("Window onload triggered");
   const model = new SnakeModel(GRID_WIDTH, GRID_HEIGHT);
-  const view = new SnakeView(model, "gameCanvas", 20);
+  const view = new SnakeView(model, "gameCanvas", 28);
   const controller = new SnakeController(model, view, 500); // 500ms per tick
 
   // Start spillet

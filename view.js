@@ -1,5 +1,5 @@
 class SnakeView {
-  constructor(model, canvasId, cellSize = 20) {
+  constructor(model, canvasId, cellSize = 28) {
     this.model = model;
     this.canvas = document.getElementById(canvasId);
     this.ctx = this.canvas.getContext("2d");

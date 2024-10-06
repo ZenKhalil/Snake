@@ -62,9 +62,9 @@ You can play the game live [here](https://zenkhalil.github.io/Snake/).
     
 Open the `index.html` file in your web browser.
     
-    ```bash
+```bash
        open index.html
-    ```
+```
     
 Alternatively, you can use a live server extension or tool for a better development experience.
     

@@ -1,0 +1,181 @@
+/* Center the canvas and controls */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #2c3e50; /* Dark background for modern look */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ecf0f1;
+}
+
+#controls {
+  margin-bottom: 20px;
+}
+
+button, select {
+  padding: 14px 28px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+button:hover, select:hover {
+  background-color: #2980b9;
+}
+
+/* HUD Container */
+#hud {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 840px; /* Samme bredde som #gameCanvas for konsistens */
+  margin-bottom: 20px; /* Placerer HUD'en over canvas'et */
+  padding: 10px;
+  background-color: #34495e; /* Komplementerer canvas' baggrund */
+  border: 2px solid #ecf0f1; /* Samme farve som canvas' ramme */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtil skygge for dybde */
+  color: #ecf0f1; /* Lys tekstfarve for god kontrast */
+}
+
+/* HUD Items */
+.hud-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #ecf0f1; /* Sikrer, at teksten er læselig */
+}
+
+/* Margin mellem label og værdi */
+.hud-item span:first-child {
+  margin-right: 5px;
+}
+
+/* Lives Container */
+#lives {
+  display: flex;
+  align-items: center;
+}
+
+/* Individuelle hjerter */
+.life {
+  width: 34px; /* Fast lille bredde */
+  height: 34px; /* Fast lille højde */
+  object-fit: contain; /* Bevar proportioner */
+  margin-left: 5px; /* Lidt afstand mellem hjertene */
+  transition: opacity 0.5s ease; /* Tilføjer transition for opacity */
+}
+
+/* Hover-effekt på hjerter */
+.life:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+/* Responsivt Design for HUD */
+@media (max-width: 650px) {
+  #hud {
+    flex-direction: column;
+    width: 90%; /* Tilpasser sig mindre skærme */
+  }
+
+  .hud-item {
+    margin: 5px 0;
+  }
+}
+
+/* Juster afstand mellem HUD og Controls */
+#controls {
+  margin-top: 10px; /* Placerer controls under HUD */
+}
+
+/* Tekstfarve for HUD */
+#hud span {
+  font-size: 22px;
+  color: #ecf0f1; /* Sikrer, at både label og værdi er i lys farve */
+}
+
+/* Style the canvas */
+#gameCanvas {
+  border: 2px solid #ecf0f1;
+  background-color: #34495e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Add grid lines */
+#gameCanvas.grid-lines {
+  background-image:
+    linear-gradient(to right, #7f8c8d 1px, transparent 1px),
+    linear-gradient(to bottom, #7f8c8d 1px, transparent 1px);
+  background-size: 28px 28px; /* Adjust based on cell size */
+}
+
+/* Stylize Game Over Text */
+canvas.game-over-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e74c3c;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px #2c3e50;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #382c2c;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+#modalOkButton {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#modalOkButton:hover {
+  background-color: #c0392b;
+}
+
+p {
+  color: #9bb7ca;
+  font-size: 30px;
+}

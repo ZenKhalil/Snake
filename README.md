@@ -146,34 +146,34 @@ Contributions are welcome! If you'd like to improve the game or add new features
     
 2. **Clone the Forked Repository**
     
-       ```bash
+    ```bash
        git clone https://github.com/your-username/snake-game-enhanced.git
        cd snake-game-enhanced
-       ```
+    ```
     
 3. **Create a New Branch**
     
        Create a branch for your feature or bug fix.
     
-       ```bash
+    ```bash
        git checkout -b feature/YourFeatureName
-       ```
+    ```
     
 4. **Commit Your Changes**
     
        Make your changes and commit them with a descriptive message.
     
-       ```bash
+    ```bash
        git commit -m "Add feature: YourFeatureName"
-       ```
+    ```
     
 5. **Push to the Branch**
     
        Push your changes to your forked repository.
     
-       ```bash
+    ```bash
        git push origin feature/YourFeatureName
-       ```
+    ```
     
 6. **Open a Pull Request**
     

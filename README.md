@@ -60,13 +60,13 @@ You can play the game live [here](https://zenkhalil.github.io/Snake/).
     
 3. **Run Locally**
     
-       Open the `index.html` file in your web browser.
+Open the `index.html` file in your web browser.
     
        ```bash
        open index.html
        ```
     
-       Alternatively, you can use a live server extension or tool for a better development experience.
+Alternatively, you can use a live server extension or tool for a better development experience.
     
 ## Usage
     

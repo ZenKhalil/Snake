@@ -72,7 +72,7 @@ Alternatively, you can use a live server extension or tool for a better developm
     
 1. **Start the Game**
     
-       - Click the **"Start Game"** button to begin playing.
+       - Click the **"Start Game"** button, or any of the arrow keys to begin playing.
     
 2. **Control the Snake**
     
